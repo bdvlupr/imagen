@@ -36,6 +36,25 @@ public class Ejec {
 			e.printStackTrace();
 		}
 		System.out.println(contador);
+		
+		copia(biteado);
+	}
+	
+	static void copia (int datos[]){
+		
+		try {
+			FileOutputStream salida=new FileOutputStream("C:/Users/Familia rocker/Desktop/copia.jpg");
+		
+		for(int i=0;i<datos.length;i++){
+			
+			salida.write(datos[i]);
+		}
+			
+			salida.close();
+		} catch (IOException e) {
+			//
+			e.printStackTrace();
+		}
 	}
 }
 
